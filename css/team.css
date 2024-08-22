@@ -39,7 +39,7 @@ nav ul li a:hover {
 
 /* Banner Section */
 .banner {
-  background: url('../images/teamphotos/IMG_1350.JPG') no-repeat center center/cover; /* Replace with the banner image */
+  background: url('../teamphotos/IMG_1350.JPG') no-repeat center center/cover; /* Replace with the banner image */
   height: 400px;
   display: flex;
   align-items: center;
