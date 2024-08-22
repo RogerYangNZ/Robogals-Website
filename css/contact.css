@@ -1,0 +1,238 @@
+/* Navigation Bar */
+nav {
+  position: absolute; /* Position it over the banner */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10; /* Ensure it's above the banner */
+  background: none; /* Remove any background color */
+}
+
+nav .logo {
+  height: 100px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 40px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Body */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Times New Roman', Times, serif;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* This adds the semi-transparent overlay */
+  z-index: 1;
+}
+
+
+body::before {
+  content: '';
+  background: url('../images/training.JPG') no-repeat center center/cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.5; /* Adjust opacity for semi-transparency */
+}
+
+.contact-page {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  position: relative;
+  opacity: 0.9;
+}
+
+.contact-content {
+  display: flex;
+  width: 100%;
+}
+
+.contact-info {
+  width: 40%;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.contact-form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  background-color: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0066cc;
+  background-color: #fff;
+}
+
+button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #004d99;
+}
+
+
+/* Footer Section */
+footer {
+  background-color: #2980b9;
+  color: rgb(20, 19, 19);
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.footer-content h3 {
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.add-me-message {
+  font-size: 18px;
+  color: #060606;
+  margin-top: 10px;
+  min-height: 20px; /* Ensures space is allocated for the message */
+}
+
+
+@media (max-width: 768px) {
+  .contact-content {
+      flex-direction: column;
+  }
+
+  .contact-info, 
+  .contact-form {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 30px;
+  }
+
+  .form-group {
+      width: 100%;
+  }
+}

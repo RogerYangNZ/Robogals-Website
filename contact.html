@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Robogals</title>
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <!-- Navigation Section -->
+  <nav>
+    <img
+      src="images/aucklandlogo.png"
+      alt="Robogals Auckland Logo"
+      class="logo"
+    />
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="team.html">Meet the Team</a></li>
+      <li><a href="workshop.html">Workshops</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <body>
+    <div class="contact-page">
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>Have questions? We would love to hear from you.</p>
+          <p><strong></strong>auckland.president@robogals.org</p>
+          <p>
+            <strong></strong>20 Symonds Street, Auckland CBD, Auckland 1010, New
+            Zealand
+          </p>
+        </div>
+
+        <div class="contact-form">
+          <input type="hidden" name="access_key" value="35618dea-0777-4c66-a642-36761f6cd3f6">
+            <div class="form-group full-width">
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="full-name" required />
+            </div>
+            <div class="form-group full-width">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group full-width">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+                <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
