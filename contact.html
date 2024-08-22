@@ -35,7 +35,12 @@
         </div>
 
         <div class="contact-form">
-          <input type="hidden" name="access_key" value="35618dea-0777-4c66-a642-36761f6cd3f6">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="35618dea-0777-4c66-a642-36761f6cd3f6"
+            />
             <div class="form-group full-width">
               <label for="full-name">Full Name</label>
               <input type="text" id="full-name" name="full-name" required />
@@ -53,8 +58,13 @@
                 required
               ></textarea>
             </div>
-                <!-- Honeypot Spam Protection -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <!-- Honeypot Spam Protection -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
 
             <button type="submit">Send</button>
           </form>
