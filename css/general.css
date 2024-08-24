@@ -1,20 +1,14 @@
 /* General Styles */
-body {
   /* General Styles */
 
 body {
-  font-family: 'Roboto', 'Times New Roman', Times, serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
   background-color: #f9f9f9;
 }
 
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background-color: #f9f9f9;
-}
 
 
 /* Navigation Bar */
@@ -22,7 +16,6 @@ nav {
   position: absolute; /* Position it over the banner */
   top: 0;
   left: 0;
-  width: 100%;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -36,10 +29,9 @@ nav .logo {
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style: none;
   display: flex;
+  margin-right: auto; /* This pushes the navigation links to the right */
 }
 
 nav ul li {
@@ -55,7 +47,6 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
-
 /* Banner Section */
 .banner {
   background: url('../images/frontpage.JPG') no-repeat center center/cover;
@@ -66,7 +57,7 @@ nav ul li a:hover {
 }
 
 .banner .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(63, 60, 60, 0.5);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -113,11 +104,13 @@ nav ul li a:hover {
   justify-content: space-around;
   padding: 60px 40px;
   background-color: #fff;
+  min-height: 500px; 
 }
 
 .info-card {
   width: 30%;
   text-align: center;
+  transform: translateY(100px); /* Move the cards down by 50px */
 }
 
 
@@ -136,12 +129,14 @@ nav ul li a:hover {
   background: url('../images/impact.JPG') no-repeat center center/cover;
   padding: 60px 20px;
   text-align: center;
+  min-height: 900px; /* Adjust this to make the section taller */
 }
 
 .social-impact-section h2 {
-  font-size: 36px;
-  color: white;
+  font-size: 70px;
+  color: rgb(255, 255, 255);
   margin-bottom: 40px;
+  transform: translateY(500px); /* Move the cards down by 50px */
 }
 
 .impact-cards {
@@ -164,6 +159,7 @@ nav ul li a:hover {
   margin: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  transform: translateY(100px); /* Move the cards down by 50px */
 }
 
 .impact-card:hover {
@@ -179,17 +175,108 @@ nav ul li a:hover {
   font-size: 18px;
   margin: 10px 0 0;
 }
+/* New Get Involved Section */
+.get-involved-section {
+  background: url('../images/training.JPG') no-repeat center center/cover;
+  padding: 80px 20px;
+  padding: 80px 20px;
+  min-height: 600px;
+  opacity: 50;
+}
+
+.get-involved-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+
+
+.get-involved-content {
+  flex: 1;
+  max-width: 500px;
+  text-align: left;
+  background-color: rgb(74, 72, 74,0.8); /* Semi-transparent dark overlay */
+  padding: 40px;
+  border-radius: 20px;
+  color: white; /* Make sure the text is readable on dark background */
+  transform: translateY(100px); /* Move the cards down by 50px */
+
+}
+
+.get-involved-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #3498db; /* Set the heading color to white */
+}
+
+.get-involved-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #fff; /* Set paragraph text to white */
+  line-height: 1.6;
+}
+
+.get-involved-button {
+  padding: 15px 30px;
+  background-color: #3498db; /* Robogals blue theme */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
 
 /* Sponsors Section */
-.sponsors-section {
-  background-color: #d5a5df;
-  padding: 40px 20px;
+
+.sponsor-words {
+  text-align: center; /* Center the text */
+  font-size: 2em; /* Make the text large like a title */
+  font-weight: bold; /* Make the text bold */
+  margin-bottom: 0; /* Remove margin from the bottom */
+  margin-top: 20px; /* Add margin to the top if needed for spacing */
+  color: #0b0c0c; /* Optional: set a text color */
+  font-family: Arial, sans-serif; /* Choose a font family */
+  background-color: #f9f9f9; /* Background color for the sponsor section */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.sponsor-section {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f9f9; /* Background color for the sponsor section */
+  padding: 20px 0;
   text-align: center;
 }
 
-.sponsors-list {
-  font-size: 24px;
-  color: #0a090b;
+.sponsor-container {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.sponsor-container img {
+  height: 150px; /* Adjust this to your desired height */
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
 }
 
 /* Footer Section */

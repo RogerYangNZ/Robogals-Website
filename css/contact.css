@@ -3,7 +3,6 @@ nav {
   position: absolute; /* Position it over the banner */
   top: 0;
   left: 0;
-  width: 100%;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -53,7 +52,7 @@ body, html {
 }
 
 body {
-  font-family: 'Roboto', 'Times New Roman', Times, serif;
+  font-family: 'Inter', sans-serif;
   background-color: #f8f9fa;
   color: #333;
   display: flex;

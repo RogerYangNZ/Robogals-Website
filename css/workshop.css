@@ -16,7 +16,6 @@ nav {
   position: absolute; /* Position it over the banner */
   top: 0;
   left: 0;
-  width: 100%;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -69,6 +68,7 @@ nav ul li a:hover {
 }
 
 .overlay {
+  background-color: rgba(63, 60, 60, 0.5);
   position: absolute;
   top: 0;
   left: 0;
