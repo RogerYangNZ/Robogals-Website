@@ -234,6 +234,20 @@ nav ul li a:hover {
   transition: background-color 0.3s ease;
 }
 
+/* New Testing Sponsor Section */
+.sponsor-banner {
+  width: 100%;
+  text-align: center;
+}
+
+.sponsor-banner img {
+  max-width: 100%;
+  height: auto; /* Set the height of the image container */
+  object-fit: cover;
+  display: inline-block;
+  border-radius: 8px; /* Optional: Rounds the corners of the image */
+}
+
 /* Sponsors Section */
 
 .sponsor-words {
