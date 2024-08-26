@@ -274,19 +274,18 @@ nav ul li {
   }
 }
 
-/* Our Social Impact Section */
 .social-impact-section {
   background: url("../images/impact.JPG") no-repeat center center/cover;
   padding: 60px 20px;
   text-align: center;
-  min-height: 900px; /* Adjust this to make the section taller */
+  min-height: 900px;
 }
 
 .social-impact-section h2 {
   font-size: 70px;
   color: rgb(255, 255, 255);
   margin-bottom: 40px;
-  transform: translateY(130px); /* Move the cards down by 50px */
+  transform: translateY(130px);
 }
 
 .impact-cards {
@@ -298,8 +297,8 @@ nav ul li {
 
 .impact-card {
   background-color: #3498db;
-  border-radius: 20px; /* Rounded corners */
-  width: 200px; /* Square dimensions */
+  border-radius: 20px;
+  width: 200px;
   height: 200px;
   display: flex;
   flex-direction: column;
@@ -307,10 +306,10 @@ nav ul li {
   align-items: center;
   color: white;
   margin: 20px;
-  border: 3px solid #2980b9; /* Darker blue border color */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow for depth */
+  border: 3px solid #2980b9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  transform: translateY(200px); /* Move the cards down by 50px */
+  transform: translateY(200px);
 }
 
 .impact-card:hover {
@@ -326,6 +325,63 @@ nav ul li {
   font-size: 18px;
   margin: 10px 0 0;
 }
+
+@media only screen and (max-width: 768px) {
+  .social-impact-section {
+    padding: 40px 15px;
+    min-height: 600px;
+  }
+
+  .social-impact-section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    transform: translateY(0);
+  }
+
+  .impact-cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .impact-card {
+    width: 150px;
+    height: 150px;
+    margin: 10px 0;
+    border: 2px solid #2980b9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+  }
+
+  .impact-card h3 {
+    font-size: 36px;
+  }
+
+  .impact-card p {
+    font-size: 14px;
+    margin: 5px 0 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .social-impact-section {
+    min-height: 500px;
+  }
+
+  .impact-card {
+    width: 130px;
+    height: 130px;
+  }
+
+  .impact-card h3 {
+    font-size: 32px;
+  }
+
+  .impact-card p {
+    font-size: 12px;
+  }
+}
+
 /* New Get Involved Section */
 .get-involved-section {
   background: url("../images/training.JPG") no-repeat center center/cover;
