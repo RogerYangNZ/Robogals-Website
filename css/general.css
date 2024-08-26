@@ -261,6 +261,19 @@ nav ul li {
   line-height: 1.6;
 }
 
+/* Responsive Layout for Small Screens */
+@media only screen and (max-width: 600px) {
+  .info-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
 /* Our Social Impact Section */
 .social-impact-section {
   background: url("../images/impact.JPG") no-repeat center center/cover;
