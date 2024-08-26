@@ -1,6 +1,5 @@
-/* Navbar Styles */
 nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -186,8 +185,19 @@ body::before {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the contact page */
-  z-index: 1; /* Ensure it's above the background */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: margin-top 0.3s ease;
+}
+
+@media (max-width: 1023px) {
+  .contact-page {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-top: 150px;
+  }
 }
 
 .contact-content {
@@ -321,7 +331,7 @@ footer {
   .contact-form {
     width: 100%;
     padding-right: 0;
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
 
   .form-group {
