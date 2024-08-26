@@ -1,44 +1,147 @@
-/* Navigation Bar */
+/* Navbar Styles */
 nav {
-  position: absolute; /* Position it over the banner */
+  position: fixed;
   top: 0;
   left: 0;
-  padding: 20px 40px;
+  width: 100%;
+  background: none; /* Remove any background color */
+  padding: 1.5rem;
+  z-index: 100; /* Ensure the navbar is above other elements */
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10; /* Ensure it's above the banner */
-  background: none; /* Remove any background color */
 }
 
-nav .logo {
-  height: 100px;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+.logo {
+  width: 100px;
 }
 
 nav ul li {
-  margin-left: 40px;
+  margin-right: 40px;
 }
 
-nav ul li a {
-  color: white;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
   text-decoration: none;
-  font-size: 20px;
+  color: white;
+  font-size: large;
+  position: relative;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
 }
 
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger icon styles */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1023px) {
+  .menu-icon {
+    display: flex;
+    position: relative;
+    z-index: 11;
+  }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #2980b9;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-left: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .nav-links li {
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  .nav-links.show {
+    transform: translateX(0);
+  }
+
+  .menu-icon.open {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
 /* Body */
-
-
 
 * {
   margin: 0;
@@ -46,34 +149,22 @@ nav ul li a:hover {
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #f8f9fa;
   color: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* This adds the semi-transparent overlay */
-  z-index: 1;
-}
-
-
+/* Overlay background */
 body::before {
-  content: '';
-  background: url('../images/training.JPG') no-repeat center center/cover;
+  content: "";
+  background: url("../images/training.JPG") no-repeat center center/cover;
   position: fixed;
   top: 0;
   left: 0;
@@ -83,22 +174,25 @@ body::before {
   opacity: 0.5; /* Adjust opacity for semi-transparency */
 }
 
+/* Contact Page */
 .contact-page {
   width: 100%;
   max-width: 1200px;
   padding: 40px;
-  display: flex;
-  justify-content: space-between;
   background-color: white;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  position: relative;
   opacity: 0.9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the contact page */
+  z-index: 1; /* Ensure it's above the background */
 }
 
 .contact-content {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
 }
 
 .contact-info {
@@ -183,7 +277,6 @@ button:hover {
   background-color: #004d99;
 }
 
-
 /* Footer Section */
 footer {
   background-color: #2980b9;
@@ -218,20 +311,20 @@ footer {
   min-height: 20px; /* Ensures space is allocated for the message */
 }
 
-
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .contact-content {
-      flex-direction: column;
+    flex-direction: column;
   }
 
-  .contact-info, 
+  .contact-info,
   .contact-form {
-      width: 100%;
-      padding-right: 0;
-      margin-bottom: 30px;
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
   }
 
   .form-group {
-      width: 100%;
+    width: 100%;
   }
 }
