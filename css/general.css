@@ -187,13 +187,13 @@ nav ul li {
 
 .banner-content .btn {
   background-color: #3498db;
-  padding: 10px 20px;
+  padding: 15px 30px;
   color: white;
   text-decoration: none;
-  font-size: 18px;
-  border-radius: 10px;
+  font-size: 20px;
+  border-radius: 12px;
   display: inline-block;
-  margin-top: 25px; /* Add this to move the button down */
+  margin-top: 25px;
 }
 
 .banner-content .btn:hover {
@@ -386,7 +386,6 @@ nav ul li {
 .get-involved-section {
   background: url("../images/training.JPG") no-repeat center center/cover;
   padding: 80px 20px;
-  padding: 80px 20px;
   min-height: 600px;
   opacity: 50;
 }
@@ -405,29 +404,32 @@ nav ul li {
   flex: 1;
   max-width: 500px;
   text-align: left;
-  background-color: rgb(74, 72, 74, 0.8); /* Semi-transparent dark overlay */
+  background-color: rgba(74, 72, 74, 0.8);
   padding: 40px;
   border-radius: 20px;
-  color: white; /* Make sure the text is readable on dark background */
-  transform: translateY(100px); /* Move the cards down by 50px */
+  color: white;
+  margin-top: -70px;
+  transform: translateY(100px);
+  /* Add border */
+  border: 3px solid #3498db; /* Robogals blue theme border */
 }
 
 .get-involved-content h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #3498db; /* Set the heading color to white */
+  color: #3498db;
 }
 
 .get-involved-content p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  color: #fff; /* Set paragraph text to white */
+  color: #fff;
   line-height: 1.6;
 }
 
 .get-involved-button {
   padding: 15px 30px;
-  background-color: #3498db; /* Robogals blue theme */
+  background-color: #3498db;
   color: white;
   border: none;
   border-radius: 30px;
@@ -438,21 +440,54 @@ nav ul li {
   transition: background-color 0.3s ease;
 }
 
-/* New Testing Sponsor Section */
+.get-involved-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+  .get-involved-section {
+    padding: 70px 20;
+    min-height: 500px;
+  }
+
+  .get-involved-container {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .get-involved-content {
+    max-width: 100%;
+    padding: 20px;
+    margin-top: 0px;
+    transform: translateY(0); /* Reset the transform on smaller screens */
+  }
+
+  .get-involved-content h2 {
+    font-size: 2rem;
+  }
+
+  .get-involved-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}
+
+/*Sponsor Section */
 .sponsor-banner {
+  position: relative;
   width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sponsor-banner img {
-  max-width: 100%;
-  height: auto; /* Set the height of the image container */
-  object-fit: cover;
-  display: inline-block;
-  border-radius: 8px; /* Optional: Rounds the corners of the image */
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-/* Sponsors Section */
 
 .sponsor-words {
   text-align: center; /* Center the text */
