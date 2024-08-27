@@ -193,6 +193,7 @@ h1 {
 }
 
 .get-involved-container {
+  padding: 20px 20px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -259,7 +260,6 @@ p {
   .section-content {
     flex-direction: column;
     text-align: center;
-    border-bottom: 1px solid #e0e0e0;
   }
 
   .section-img img {
