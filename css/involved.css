@@ -193,6 +193,7 @@ h1 {
 }
 
 .get-involved-container {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -203,8 +204,15 @@ h1 {
 .section-content {
   display: flex;
   align-items: center;
-  padding: 20px 0;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f0f8ff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 4px solid #21618c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .section-img img {
@@ -222,7 +230,7 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
-  color: #0073e6;
+  color: #2980b9;
 }
 
 p {
@@ -235,7 +243,7 @@ p {
 .cta-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #0073e6;
+  background-color: #2980b9;
   color: white;
   border-radius: 5px;
   text-decoration: none;
@@ -272,6 +280,7 @@ footer {
   color: rgb(20, 19, 19);
   padding: 20px 20px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .footer-content h3 {

@@ -269,12 +269,12 @@ body::before {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #0066cc;
+  border-color: #2980b9;
   background-color: #fff;
 }
 
 button {
-  background-color: #0066cc;
+  background-color: #2980b9;
   color: white;
   border: none;
   padding: 15px 25px;
