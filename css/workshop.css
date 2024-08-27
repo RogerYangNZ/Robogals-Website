@@ -269,6 +269,11 @@ nav ul li {
     text-align: center;
   }
 
+  .workshop-section.reverse .workshop-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .workshop-details {
     padding-left: 0;
     width: 100%;
