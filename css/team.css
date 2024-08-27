@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
 /* Navigation Bar */
 nav {
   position: absolute;
@@ -176,7 +178,7 @@ nav ul li {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f5f5f5;
   color: #333;
 }

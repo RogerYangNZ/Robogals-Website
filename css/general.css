@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -496,7 +498,7 @@ nav ul li {
   margin-bottom: 0; /* Remove margin from the bottom */
   margin-top: 20px; /* Add margin to the top if needed for spacing */
   color: #0b0c0c; /* Optional: set a text color */
-  font-family: Arial, sans-serif; /* Choose a font family */
+  font-family: "Poppins", sans-serif;
   background-color: #f9f9f9; /* Background color for the sponsor section */
 }
 * {
